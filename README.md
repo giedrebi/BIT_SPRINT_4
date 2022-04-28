@@ -24,7 +24,7 @@ Project's url: [TODO List app](https://giedrebi.github.io/BIT_SPRINT_4/)
 
 3. Type `git clone`, then paste the URL you copied earlier and press Enter to create your local clone:
 
-`$ git clone https://github.com/giedrebi/BIT_SPRINT_4.git` // paKEISTI NUORODA
+`$ git clone https://github.com/giedrebi/BIT_SPRINT_4.git` 
 
 5. You need to have **Live Server** extension in VScode.
 
