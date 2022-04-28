@@ -24,9 +24,24 @@ class item {
         input.value = name;
         input.classList.add('item_input');
 
+        var edit = document.createElement('button');
+        edit.className = 'fas fa-edit edit';
+        edit.type = 'button'; 
+
+        var save = document.createElement('button');
+        save.className = 'fas fa-check-square save';
+        save.type = 'button';
+        save.style.display = 'none';
+
+        var remove = document.createElement('button');
+        remove.className ='far fa-trash-alt remove';
+
         container.appendChild(itemBox);
 
         itemBox.appendChild(input);
+        itemBox.appendChild(edit);
+        itemBox.appendChild(save);
+        itemBox.appendChild(remove);
     }
 }
 
