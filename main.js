@@ -95,3 +95,13 @@ function check() {
 for (var v = 0 ; v < todos.length ; v++){
     new item(todos[v]);
 }
+
+function deleteAll() {
+    const elements = document.getElementsByClassName('item');
+    if (confirm('Do you want to delete all tasks?')) {
+        while (elements.length > 0) {
+            elements[0].parentNode.removeChild(elements[0]);
+            localStorage.clear('todos');
+        }
+    }
+}
