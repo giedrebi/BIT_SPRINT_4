@@ -27,11 +27,13 @@ class item {
         var edit = document.createElement('button');
         edit.className = 'fas fa-edit edit';
         edit.type = 'button'; 
+        edit.addEventListener('click', () => this.edit(input, name, edit, save));
 
         var save = document.createElement('button');
         save.className = 'fas fa-check-square save';
         save.type = 'button';
         save.style.display = 'none';
+        save.addEventListener('click', () => this.save(input, name, edit, save));
 
         var remove = document.createElement('button');
         remove.className ='far fa-trash-alt remove';
@@ -42,6 +44,26 @@ class item {
         itemBox.appendChild(edit);
         itemBox.appendChild(save);
         itemBox.appendChild(remove);
+    }
+    edit(input, name, edit, save) {
+        input.readOnly = false;
+        input.style.background = 'white';
+        input.style.color = '#498da0';
+        edit.style.display = 'none';
+        save.style.display = '';
+        let indexof = todos.indexOf(name);
+        todos[indexof] = input.value;
+        window.localStorage.setItem("todos", JSON.stringify(todos));
+    }
+    save(input, name, edit, save) {
+        input.readOnly = true;
+        input.style.background = 'none'
+        input.style.color = 'white';
+        edit.style.display = '';
+        save.style.display = 'none';
+        let indexof = todos.indexOf(name);
+        todos[indexof] = input.value;
+        window.localStorage.setItem("todos", JSON.stringify(todos));
     }
 }
 
