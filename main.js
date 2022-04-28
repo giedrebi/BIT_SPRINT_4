@@ -2,6 +2,14 @@ const container = document.querySelector('.container');
 var inputValue = document.querySelector('.input');
 const add = document.querySelector('.add');
 
+if(window.localStorage.getItem("todos") == undefined){
+    var todos = [];
+    window.localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+var todosEX = window.localStorage.getItem("todos");
+var todos = JSON.parse(todosEX);
+
 class item {
     constructor(name) {
         this.createItem(name);
@@ -34,6 +42,12 @@ function check() {
         alert('Please enter task!');
     } else  {
 		new item(inputValue.value);
+        todos.push(inputValue.value);
+        window.localStorage.setItem("todos", JSON.stringify(todos));
 		inputValue.value = "";
 	}
+}
+
+for (var v = 0 ; v < todos.length ; v++){
+    new item(todos[v]);
 }
