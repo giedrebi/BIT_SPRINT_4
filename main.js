@@ -37,6 +37,7 @@ class item {
 
         var remove = document.createElement('button');
         remove.className ='far fa-trash-alt remove';
+        remove.addEventListener('click', () => this.remove(itemBox, name));
 
         container.appendChild(itemBox);
 
@@ -63,6 +64,12 @@ class item {
         save.style.display = 'none';
         let indexof = todos.indexOf(name);
         todos[indexof] = input.value;
+        window.localStorage.setItem("todos", JSON.stringify(todos));
+    }
+    remove(itemBox, name) {
+        itemBox.parentNode.removeChild(itemBox);
+        let index = todos.indexOf(name);
+        todos.splice(index, 1);
         window.localStorage.setItem("todos", JSON.stringify(todos));
     }
 }
