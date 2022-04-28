@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="author" content="Giedre Bielske"/>
+    <meta name="title" content="TODO List"/>
+    <meta name="description" content="TODO list app" />
+    <meta name="keywords" content="todo, list, app"/>
+    <meta name="robots" content="index"/>
+    <meta name="googlebot" content="index"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <title>TODO List</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8RZ3QVWTM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q8RZ3QVWTM');
+    </script>
+    
+    <script src="https://kit.fontawesome.com/d9c5ee75e5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><span class="title">Todo</span>List</h1>
+    <div class="inputDiv">
+        <input type="text" class="input" placeholder="What Do You Want to Do...">
+        <button class="fas fa-plus add"></button>
+    </div>  
+    <div class="box">
+        <p id="removeall">Delete all</p>  
+        <button class="far fa-trash-alt removeall" onclick="deleteAll()"></button>
+    </div>  
+    <div class="container"></div>
+    <script src='main.js'></script>
+</body>
+</html>
