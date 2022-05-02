@@ -1,17 +1,17 @@
 # BIT_SPRINT_4
 
-Project was created for learning purposes. It's a TODO List app.
+Project was created for learning purposes. It's a SHOPPING List app.
 
-Project's url: [TODO List app](https://giedrebi.github.io/BIT_SPRINT_4/)
+Project's url: [SHOPPING List app](https://giedrebi.github.io/BIT_SPRINT_4/)
 
 ### About project
 
 * Website include 5 functions:
-  - Add task
-  - Edit task
-  - Save edited task
-  - Remove task
-  - Remove all tasks
+  - Add item
+  - Edit item
+  - Save edited item
+  - Remove item
+  - Remove all list
 
 * Made with HTML, CSS and Javascript.
 
